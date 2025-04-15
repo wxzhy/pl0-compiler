@@ -1,0 +1,33 @@
+program test;
+const num0:=0,num1:=1;
+var x,y,loop,result;
+procedure add(x,y);
+begin
+    result:=x+y
+end;
+procedure sub(x,y);
+begin
+    result:=x-y
+end
+begin
+    read(x,y);
+    loop:=10;
+    while loop>0 do
+    begin
+        if odd x then begin
+            write(num0);
+            call add(x,y);
+            write(result);
+            call add(y,x);
+            write(result)
+        end
+        else begin
+            write(num1);
+            call sub(x,y);
+            write(result);
+            call sub(y,x);
+            write(result)
+        end;
+        x:=x+1;y:=y-1;loop:=loop-1
+    end
+end

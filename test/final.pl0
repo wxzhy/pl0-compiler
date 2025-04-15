@@ -1,0 +1,85 @@
+program final;
+const num0:=0,num1:=1;
+var x,y,loop,result;
+procedure add(x,y);
+begin
+    result:=x+y
+end;
+procedure sub(x,y);
+begin
+    result:=x-y
+end;
+procedure calc();
+begin
+    read(x,y);
+    loop:=10;
+    while loop>0 do
+    begin
+        if odd x then begin
+            write(num0);
+            call add(x,y);
+            write(result);
+            call add(y,x);
+            write(result)
+        end
+        else begin
+            write(num1);
+            call sub(x,y);
+            write(result);
+            call sub(y,x);
+            write(result)
+        end;
+        x:=x+1;y:=y-1;loop:=loop-1
+    end
+end;
+procedure id();
+    const a:=5;
+    procedure k4(x);
+    begin
+        write(x+1,-1,a)
+    end;
+    procedure k0(x);
+        procedure k1(x);
+            procedure k2(x);
+                const a:=7;
+                procedure k3(x);
+                begin
+                    write(-1,a);
+                    read(a);
+                    write(a*10+x);
+                    call k4(x+1)
+                end
+            begin
+                write(x+1);
+                call k3(x+1)
+            end
+        begin
+            write(x+1);
+            call k2(x+1)
+        end
+    begin
+        write(x+1);
+        call k1(x+1)
+    end
+
+begin
+    read(a);
+    call k0(a+1-1)
+end;
+procedure recursive(x);
+begin
+    if x<100 then
+    begin
+        write(x,x*x);
+        call recursive(x+1)
+    end
+    else
+        write(-1)
+end
+begin
+    call calc();
+    write(-5);
+    call id();
+    write(-6);
+    call recursive(1)
+end

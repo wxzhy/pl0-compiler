@@ -1,0 +1,31 @@
+program ScopeTest;
+var x, y; 
+procedure outer(a);
+const c := 20;
+begin
+    a:=30;
+    write(a,c)
+end;
+procedure TestProc(a, b); 
+const c := 10;
+var z;
+procedure inner(a);
+begin
+    write(a,c);
+    call outer(a)
+end
+begin
+    z := a + b;             
+    write(z);               
+    x := z;                 
+    a := a + 1;             
+    write(a, b);
+    call inner(b);
+    write(a,b)
+end
+begin
+    x := 10;                
+    y := 20;                
+    call TestProc(x, y);         
+    write(x, y)
+end
